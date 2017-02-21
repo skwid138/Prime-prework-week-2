@@ -1,4 +1,4 @@
-describe('thePizzeria()', function() {
+describe('promode thePizzeria()', function() {
   it('should log the correct answers based on scope', function() {
 
     thePizzeria();
