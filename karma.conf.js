@@ -15,8 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'french-inquisition/*.js',
-      // 'assignment/*.js',
+      'assignment/*.js',
       'tests/*.js'
     ],
 
