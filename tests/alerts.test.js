@@ -1,4 +1,4 @@
-describe('animalGuess()', function() {
+describe('basemode animalGuess()', function() {
   it('should alert Try Again when called with the argument panda', function() {
 
     animalGuess('panda');
