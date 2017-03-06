@@ -1,13 +1,16 @@
-// We've created a website called "The Doubler"
-// the website accepts a bunch of different inputs from our user
-// we accept strings and numbers and booleans and objects and try to double them
-// and expect output of the type
+// We've created a function called "The Doubler"
+// the function accepts a bunch of different inputs from the caller.
+// It accepts strings, numbers, booleans and objects and tries to double them.
 
-theDoubler(prompt("Test theDoubler! Put something in here you would like to try, then check the console!"));
+var someNumber = 8;
+// make sure to test all the possible inputs.
+// var someString =
+
+theDoubler(someNumber);
 
 function theDoubler(someInput) {
 	// typeof is a built in javascript tool that allows us to find the type of an object
-    // for number, we have given an example of how that works
+  // for number, we have given an example of how that works
 
 	if (typeof someInput == "number") {
 		// if type is number, log that number multiplied by 2
