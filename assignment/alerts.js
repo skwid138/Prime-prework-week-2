@@ -29,6 +29,3 @@ function animalGuess(animalName) {
     alert('Try again.');
   }
 }
-
-// What will this log?
-// console.log(animalName);
