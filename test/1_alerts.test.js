@@ -5,7 +5,8 @@ describe('basemode animalGuess()', function() {
     expect(alertSpy.calledOnce).to.be.true;
 
     var alertArgs = alertSpy.args[0][0]; // grab alert args
-    expect(alertArgs).to.equal('Try again.');
+    expect(alertArgs.toLowerCase()).to.contain('try again');
+    expect(alertArgs.toLowerCase()).to.not.contain('How did you know');
   });
 
   it('should alert How did you know?! when called with the argument turtle', function() {
@@ -13,6 +14,7 @@ describe('basemode animalGuess()', function() {
     expect(alertSpy.calledOnce).to.be.true;
 
     var alertArgs = alertSpy.args[0][0]; // grab alert args
-    expect(alertArgs).to.equal('How did you know?!');
+    expect(alertArgs.toLowerCase()).to.contain('how did you know');
+    expect(alertArgs.toLowerCase()).to.not.contain('try again');
   });
 });
