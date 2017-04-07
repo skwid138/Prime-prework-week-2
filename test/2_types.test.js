@@ -1,5 +1,5 @@
 describe('basemode theDoubler()', function() {
-  it('should log the correct answers based on type', function() {
+  it('logs the correct responses based on type', function() {
 
     var testArray = [4,"Hey", true, {}, undefined, false];
 

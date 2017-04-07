@@ -1,5 +1,5 @@
 describe('basemode animalGuess()', function() {
-  it('should alert Try Again when called with the argument panda', function() {
+  it('triggers alert of "Try Again" when called with the argument panda', function() {
 
     animalGuess('panda');
     expect(alertSpy.calledOnce).to.be.true;
@@ -9,7 +9,7 @@ describe('basemode animalGuess()', function() {
     expect(alertArgs.toLowerCase()).to.not.contain('How did you know');
   });
 
-  it('should alert How did you know?! when called with the argument turtle', function() {
+  it('triggers alert of "How did you know?!" when called with the argument turtle', function() {
     animalGuess('turtle');
     expect(alertSpy.calledOnce).to.be.true;
 
