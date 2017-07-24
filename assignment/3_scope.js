@@ -42,7 +42,24 @@
 
     michelangelo(theNumber) + leonardo(theNumber);
     // ^ Before running the script, what number would you expect the line above to evaluate to?
-    var resultOne = undefined; // replace undefined with the result
+/*
+michelangelo
+1 = value
+value = (1 * 2)
+return value(2) == 2
+
+leonardo
+1 = value
+anotherValue == 1
+value(1) *= 4 == 4
+theNumber(1) = value(4) / 2 == 2
+return(4 + 1) == 5
+
+would return 7
+
+*/
+
+    var resultOne = 7; // replace undefined with the result
 
 
     theNumber = theNumber * 2;
