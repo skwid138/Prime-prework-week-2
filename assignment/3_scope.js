@@ -16,6 +16,7 @@
  * pizza and celebrate your understanding of these difficult topics!
  */
     var theNumber = 1;
+    console.log(theNumber);
 
     var michelangelo = function (value) {
         value = (value * 2);
@@ -36,11 +37,15 @@
     };
 
     var raphael = function (value, anotherValue, yetAnotherValue) {
+        console.log(value, anotherValue, yetAnotherValue);
         value = value * anotherValue + yetAnotherValue;
         return yetAnotherValue;
     };
 
-    michelangelo(theNumber) + leonardo(theNumber);
+     alert(michelangelo(theNumber) + leonardo(theNumber));
+    //  console.log(michelangelo(theNumber));
+    //  console.log(leonardo(theNumber));
+    console.log(theNumber);
     // ^ Before running the script, what number would you expect the line above to evaluate to?
 /*
 michelangelo
@@ -63,7 +68,56 @@ would return 7
 
 
     theNumber = theNumber * 2;
+    // theNumber = 2
+    console.log(theNumber);
 
-    donatello(theNumber, 2) - (raphael(3, 2, theNumber));
+    alert(donatello(theNumber, 2) - (raphael(3, 2, theNumber)));
     // ^ Before running the script, what number would you expect the line above to evaluate to?
-    var resultTwo = undefined; // replace undefined with the result
+    console.log(donatello(theNumber, 2));
+    console.log((raphael(3, 2, theNumber)));
+/*
+donatello(2, 2) - (raphael(3,2, 2))
+
+donatello
+  value(2) = anotherValue(2) + value(2)
+  value = 4
+
+  anotherValue(2) = value(4) * anotherValue(2)
+  anotherValue = 8
+
+  return anotherValue == 8
+
+raphael
+  value(3) = value(3) * anotherValue(2) + yetAnotherValue(2);
+  value = 8
+
+  return yetAnotherValue == 2
+
+8 - 2 = 6
+
+
+
+theNumber is being ran when leo is called so it's 4 instead of 2
+
+donatello(4, 2) - (raphael(3,2, 4))
+
+donatello
+  value(4) = anotherValue(2) + value(4)
+  value == 6
+
+  anotherValue(2) = value(4) * anotherValue(2)
+anotherValue == 8
+
+  return anotherValue == 8
+
+raphael
+  value(3) = value(3) * anotherValue(2) + yetAnotherValue(4)
+  value == 10
+  return yetAnotherValue == 4
+
+
+
+
+*/
+
+    var resultTwo = 6; // replace undefined with the result
