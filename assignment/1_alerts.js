@@ -60,6 +60,5 @@ animalGuess( animal );
 // Your answer here in a comment
 
 /* It will log an error because animal name
-is not a defined variable outside of the
-function
+is not a defined variable outside(globally) of the function(local)
 */
