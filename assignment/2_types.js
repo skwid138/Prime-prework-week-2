@@ -121,13 +121,39 @@ function boolCheck() {
 	}
 }
 
+// checks if input is an object
+function objectCheck() {
+	var someInput = buildObject();
+	if (typeof someInput == 'object' ) {
+		console.log( 'everything is an Object' );
+		// this will never not be an object
+	} else {
+		console.log( 'That\'s not an object!')
+	}
+}
 
+// collects user input and runs it through a constructor function
+function buildObject() {
+	var name = prompt('Please enter your name.');
+	var age = prompt('what is your age?');
+
+	function createUser(name, age) {
+		this.name = name;
+		this.age = age;
+	}
+
+var user = new createUser (name, age);
+console.log(user);
+return user;
+
+}
 
 // creating a function that will prompt the user for input and then log it
 function promptInput() {
 	twoNums();
 	twoWords()
 	boolCheck();
+	objectCheck();
 }
 
 promptInput();
