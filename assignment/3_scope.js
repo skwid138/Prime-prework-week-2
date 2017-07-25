@@ -105,10 +105,10 @@ donatello
   value(4) = anotherValue(2) + value(4)
   value == 6
 
-  anotherValue(2) = value(4) * anotherValue(2)
-anotherValue == 8
+  anotherValue(2) = value(6) * anotherValue(2)
+anotherValue == 12
 
-  return anotherValue == 8
+  return anotherValue == 12
 
 raphael
   value(3) = value(3) * anotherValue(2) + yetAnotherValue(4)
@@ -120,4 +120,4 @@ raphael
 
 */
 
-    var resultTwo = 6; // replace undefined with the result
+    var resultTwo = 8; // replace undefined with the result
