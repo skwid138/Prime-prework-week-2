@@ -80,8 +80,9 @@ function theDoubler(someInput) {
 }
 
 // concatinates two strings
-function twoWords(someInput) {
+function twoWords() {
 	// the way im using this someInput will always be a string, so there's room to improve
+	var someInput = prompt("Please enter a word.");
 	if (typeof someInput == 'string') {
 	console.log(someInput.repeat(2));
 	} else {
@@ -90,20 +91,23 @@ function twoWords(someInput) {
 }
 
 // takes integers and multiples them
-function twoNums(someInput) {
-	if (typeof someInput == 'number' ) {
-		console.log(someInput + ' * ' + 2 + ' = ' + someInput * 2);
-		// going to run into issues with it converting strings to numbers that should be
-		//strings, but ill come back to that if time permits
-
-		// while (typeof numPrompt !== 'number') {
-		// 	numPrompt = prompt ('That\'s not a number, please enter a number.')
-		// }
+function twoNums() {
+	var someInput = prompt("Please enter a number.");
+	someInput = parseInt(someInput);
+	while (true) {
+		if ( isNaN(someInput) == true ) {
+			someInput = prompt ('That\'s not a number, please enter a number.');
+			someInput = parseInt(someInput);
+		} else {
+			console.log(someInput + ' * ' + 2 + ' = ' + someInput * 2);
+			break;
+		}
 	}
 }
 
 // checks if a boolean is true or false and logs the result
-function boolCheck(someInput) {
+function boolCheck() {
+	var someInput = prompt("Please enter a boolean ('true' or 'false').").toLowerCase();
 	while (true) {
 		if (someInput === 'true') {
 			console.log('Super-duper true');
@@ -121,14 +125,9 @@ function boolCheck(someInput) {
 
 // creating a function that will prompt the user for input and then log it
 function promptInput() {
-	var numPrompt = prompt("Please enter a number.");
-	twoNums(parseInt(numPrompt));
-
-	var stringPrompt = prompt("Please enter a word.");
-	twoWords(stringPrompt)
-
-	var boolPrompt = prompt("Please enter a boolean ('true' or 'false').").toLowerCase();
-	boolCheck(boolPrompt);
+	twoNums();
+	twoWords()
+	boolCheck();
 }
 
 promptInput();
