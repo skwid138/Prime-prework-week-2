@@ -143,6 +143,7 @@ function buildObject() {
 	}
 
 var user = new createUser (name, age);
+console.log("Here's the 'user' object");
 console.log(user);
 return user;
 
