@@ -45,9 +45,12 @@ theDoubler(someBool);
 theDoubler(falseBool);
 theDoubler(someObject);
 theDoubler(someNothing);
+// someNothing and the line below accomplish the same thing, but in my mind the code should be as simple as possible (for humans and computers) so I think the below is a better way
 theDoubler();
 //theDoubler(theDoubler());
 //theDoubler(promptInput);
+
+twoTimes(someString);
 
 function theDoubler(someInput) {
 	// typeof is a built in javascript tool that allows us to find the type of an object
@@ -80,4 +83,14 @@ function theDoubler(someInput) {
 			console.log( 'I can\'t double this' );
 		}
 
+}
+
+function twoTimes(someInput) {
+	if (typeof someInput == 'string') {
+	//someInput = someInput.repeat(2);
+	//console.log(someInput)
+	console.log(someInput.repeat(2));
+	} else {
+	console.log('Not a String!')
+	}
 }
