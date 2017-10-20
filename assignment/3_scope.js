@@ -69,6 +69,7 @@ would return 7
 
     theNumber = theNumber * 2;
     // theNumber = 2
+    // theNumber(2) * 2 ==4
     console.log(theNumber);
 
     alert(donatello(theNumber, 2) - (raphael(3, 2, theNumber)));
@@ -76,6 +77,8 @@ would return 7
     console.log(donatello(theNumber, 2));
     console.log((raphael(3, 2, theNumber)));
 /*
+Leaving this in so you can see my work - even though it was wrong at first.
+
 donatello(2, 2) - (raphael(3,2, 2))
 
 donatello
@@ -95,9 +98,9 @@ raphael
 
 8 - 2 = 6
 
+========================================
 
-
-theNumber is being ran when leo is called so it's 4 instead of 2
+theNumber is used as a parameter in leo which is called so it's 4 instead of 2... scope!
 
 donatello(4, 2) - (raphael(3,2, 4))
 
@@ -106,17 +109,12 @@ donatello
   value == 6
 
   anotherValue(2) = value(6) * anotherValue(2)
-anotherValue == 12
-
-  return anotherValue == 12
+return anotherValue == 12
 
 raphael
   value(3) = value(3) * anotherValue(2) + yetAnotherValue(4)
   value == 10
   return yetAnotherValue == 4
-
-
-
 
 */
 
